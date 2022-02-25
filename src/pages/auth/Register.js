@@ -20,7 +20,7 @@ const Register = ({history}) => {
  
     await firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
  
-    window.localStorage.setItem("emailForSignIn", email);
+    window.localStorage.setItem("emailForRegistration", email);
  
     toast.success(
       `Email is sent to ${email}. Click the link to complete your registration`
