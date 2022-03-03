@@ -36,14 +36,15 @@ const ProductCard = ({ product }) => {
       localStorage.setItem("cart", JSON.stringify(unique));
       // show tooltip
       setTooltip("Added");
+     
 
       // add to reeux state
       dispatch({
         type: "ADD_TO_CART",
         payload: unique,
       });
-       // show cart items in side drawer
-       dispatch({
+      // show cart items in side drawer
+      dispatch({
         type: "SET_VISIBLE",
         payload: true,
       });
@@ -73,10 +74,10 @@ const ProductCard = ({ product }) => {
             <EyeOutlined className="text-warning" /> <br /> View Product
           </Link>,
           <Tooltip title={tooltip}>
-            <a onClick={handleAddToCart}>
-              <ShoppingCartOutlined className="text-danger" /> <br /> Add to
-              Cart
-            </a>
+            <button onClick={handleAddToCart} disabled={product.quantity < 1} className="btn btn-outlined-primary">
+              <ShoppingCartOutlined className="text-danger" /> <br />
+              {product.quantity < 1 ? "Out of stock" : "Add to Cart"}
+            </button>
           </Tooltip>,
         ]}
       >
