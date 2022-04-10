@@ -1,3 +1,8 @@
+body{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
 .slider img {
     height: 450px;
     object-fit: cover;
@@ -6,4 +11,45 @@
   .pointer {
     cursor: pointer;
   }
-  
+  .thumb{
+    display: none !important;
+  }
+  .carousel-status {
+    display: none !important;
+  }
+  .legend{
+    font-size:60px!important;
+    background-color: transparent!important;
+    color:rgba(255, 255, 255, 0.637) !important;   
+    opacity: 1!important;
+    bottom: 200px !important;
+  }
+  .buy-btn{
+    position: absolute;
+      bottom: 10px;   
+      border-radius: 5px!important;      
+      color: #fff!important;        
+      text-align: center;
+      opacity: 1;
+      z-index: 1!important;
+      cursor: pointer!important;
+      background-color: #001529!important;
+  }
+  .buy-btn:hover{
+    background-color: #3dd4d4!important;
+  }
+  .slide{
+    z-index: 2!important;
+  }
+  .test:hover{
+    background-color: rgb(216, 220, 231)!important;
+    transform: scale(1.05);
+    transition:0.3s;
+  }
+  .btn-primary{
+    background-color:#001529!important;
+    border:none !important;
+    font-size:32px !important; 
+    letter-spacing:2px !important;
+  }
+ 

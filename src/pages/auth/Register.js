@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import firebase from "../../firebase";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import DefaultLayout from "../../components/nav/Header";
 
 const Register = ({history}) => {
   const [email, setEmail] = useState("");
@@ -48,6 +49,8 @@ const Register = ({history}) => {
   );
 
   return (
+    <DefaultLayout>
+
     <div className="container p-5">
       <div className="row">
         <div className="col-md-6 offset-md-3">
@@ -56,6 +59,7 @@ const Register = ({history}) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

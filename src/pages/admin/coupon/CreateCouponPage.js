@@ -10,6 +10,7 @@ import {
 import "react-datepicker/dist/react-datepicker.css";
 import { DeleteOutlined } from "@ant-design/icons";
 import AdminNav from "../../../components/nav/AdminNav";
+import DefaultLayout from "../../../components/nav/Header";
 
 const CreateCouponPage = () => {
   const [name, setName] = useState("");
@@ -57,6 +58,9 @@ const CreateCouponPage = () => {
   };
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -141,6 +145,7 @@ const CreateCouponPage = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

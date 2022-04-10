@@ -29,7 +29,7 @@ const Search = () => {
         type="search"
         value={text}
         className="form-control ms-sm-2"
-        placeholder="Search"
+        placeholder="Search in LeadShop"
       />
       <SearchOutlined onClick={handleSubmit} className="input-group-text" style={{ cursor: "pointer" }} />
     </form>

@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { getCategories } from "../../../functions/category";
 import { updateSub, getSub } from "../../../functions/sub";
 import CategoryForm from "../../../components/forms/CategoryForm";
+import DefaultLayout from "../../../components/nav/Header";
 
 
 const SubUpdate = ({ match, history }) => {
@@ -49,6 +50,9 @@ const SubUpdate = ({ match, history }) => {
   };
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -86,6 +90,7 @@ const SubUpdate = ({ match, history }) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

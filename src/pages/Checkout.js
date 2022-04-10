@@ -10,6 +10,7 @@ import {
 } from "../functions/user";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import DefaultLayout from "../components/nav/Header";
 
 const Checkout = ({ history }) => {
   const [products, setProducts] = useState([]);
@@ -156,6 +157,9 @@ const Checkout = ({ history }) => {
   };
 
   return (
+    <DefaultLayout>
+
+   
     <div className="row">
       <div className="col-md-6">
         <h4>Delivery Address</h4>
@@ -218,6 +222,7 @@ const Checkout = ({ history }) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getSub } from "../../functions/sub";
 import ProductCard from "../../components/cards/ProductCard";
+import DefaultLayout from "../../components/nav/Header";
 
 const SubHome = ({ match }) => {
   const [sub, setSub] = useState({});
@@ -20,6 +21,9 @@ const SubHome = ({ match }) => {
   }, []);
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col">
@@ -43,6 +47,7 @@ const SubHome = ({ match }) => {
         ))}
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

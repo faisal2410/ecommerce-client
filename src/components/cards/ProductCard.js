@@ -80,6 +80,7 @@ const ProductCard = ({ product }) => {
             </button>
           </Tooltip>,
         ]}
+        className="test"
       >
         <Meta
           title={`${title} - $${price}`}

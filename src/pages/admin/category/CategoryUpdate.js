@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import { getCategory, updateCategory } from "../../../functions/category";
 import CategoryForm from "../../../components/forms/CategoryForm";
+import DefaultLayout from "../../../components/nav/Header";
 
 const CategoryUpdate = ({ history, match }) => {
   const { user } = useSelector((state) => ({ ...state }));
@@ -40,6 +41,9 @@ const CategoryUpdate = ({ history, match }) => {
  
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -60,6 +64,7 @@ const CategoryUpdate = ({ history, match }) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

@@ -4,6 +4,7 @@ import { getOrders, changeStatus } from "../../functions/admin";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import Orders from "../../components/order/Orders";
+import DefaultLayout from "../../components/nav/Header";
 
 const AdminDashboard = () => {
   const [orders, setOrders] = useState([]);
@@ -27,6 +28,9 @@ const AdminDashboard = () => {
   };
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -40,6 +44,7 @@ const AdminDashboard = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

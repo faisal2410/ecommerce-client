@@ -7,6 +7,7 @@ import ProductCreateForm from "../../../components/forms/ProductCreateForm";
 import { getCategories, getCategorySubs } from "../../../functions/category";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
+import DefaultLayout from "../../../components/nav/Header";
 
 const initialState = {
   title: "Macbook Pro",
@@ -72,6 +73,9 @@ const ProductCreate = () => {
   };
 
   return (
+    <DefaultLayout>
+
+  
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -108,6 +112,7 @@ const ProductCreate = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

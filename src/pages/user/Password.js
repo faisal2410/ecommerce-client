@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UserNav from "../../components/nav/UserNav";
 import firebase from "../../firebase";
 import { toast } from "react-toastify";
+import DefaultLayout from "../../components/nav/Header";
 
 const Password = () => {
   const [password, setPassword] = useState("");
@@ -48,6 +49,9 @@ const Password = () => {
   );
 
   return (
+    <DefaultLayout>
+
+  
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -63,6 +67,7 @@ const Password = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

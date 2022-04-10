@@ -5,6 +5,7 @@ import AdminProductCard from "../../../components/cards/AdminProductCard";
 import { removeProduct } from "../../../functions/product";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import DefaultLayout from "../../../components/nav/Header";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -46,6 +47,9 @@ const AllProducts = () => {
   };
 
   return (
+    <DefaultLayout>
+
+  
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -71,6 +75,7 @@ const AllProducts = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

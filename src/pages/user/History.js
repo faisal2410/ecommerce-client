@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import ShowPaymentInfo from "../../components/cards/ShowPaymentInfo";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import Invoice from "../../components/order/Invoice";
+import DefaultLayout from "../../components/nav/Header";
 
 const History = () => {
   const [orders, setOrders] = useState([]);
@@ -80,6 +81,9 @@ const History = () => {
     ));
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -93,6 +97,7 @@ const History = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

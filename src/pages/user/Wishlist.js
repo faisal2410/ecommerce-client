@@ -4,6 +4,7 @@ import { getWishlist, removeWishlist } from "../../functions/user";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { DeleteOutlined } from "@ant-design/icons";
+import DefaultLayout from "../../components/nav/Header";
 
 const Wishlist = () => {
   const [wishlist, setWishlist] = useState([]);
@@ -25,6 +26,9 @@ const Wishlist = () => {
     });
 
   return (
+    <DefaultLayout>
+
+  
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -47,6 +51,7 @@ const Wishlist = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

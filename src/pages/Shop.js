@@ -14,6 +14,7 @@ import {
   StarOutlined,
 } from "@ant-design/icons";
 import Star from "../components/forms/Star";
+import DefaultLayout from "../components/nav/Header"
 
 
 const { SubMenu, ItemGroup } = Menu;
@@ -311,6 +312,9 @@ const handleShippingchange = (e) => {
 
 
   return (
+    <DefaultLayout>
+
+  
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-3 pt-2">
@@ -436,6 +440,7 @@ const handleShippingchange = (e) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

@@ -7,7 +7,7 @@ import { getCategories, getCategorySubs } from "../../../functions/category";
 import FileUpload from "../../../components/forms/FileUpload";
 import { LoadingOutlined } from "@ant-design/icons";
 import ProductUpdateForm from "../../../components/forms/ProductUpdateForm";
-
+import DefaultLayout from "../../../components/nav/Header";
 const initialState = {
   title: "",
   description: "",
@@ -115,6 +115,9 @@ const ProductUpdate = ({ match, history }) => {
   };
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -154,6 +157,7 @@ const ProductUpdate = ({ match, history }) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

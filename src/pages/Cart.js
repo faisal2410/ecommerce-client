@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ProductCardInCheckout from "../components/cards/ProductCardInCheckout";
 import { userCart } from "../functions/user";
+import DefaultLayout from "../components/nav/Header"
 
 const Cart = ({history}) => {
   const { cart, user } = useSelector((state) => ({ ...state }));
@@ -59,6 +60,9 @@ const Cart = ({history}) => {
   );
 
   return (
+    <DefaultLayout>
+
+  
     <div className="container-fluid pt-2">
       <div className="row">
         <div className="col-md-8">
@@ -119,6 +123,7 @@ const Cart = ({history}) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

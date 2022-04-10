@@ -6,9 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Home from "./pages/Home";
-import Header from "./components/nav/Header";
 import SideDrawer from "./components/drawer/SideDrawer";
-
 import RegisterComplete from "./pages/auth/RegisterComplete";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import History from "./pages/user/History";
@@ -32,6 +30,13 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import CreateCouponPage from "./pages/admin/coupon/CreateCouponPage";
 import Payment from "./pages/Payment";
+
+import About from "./pages/others/About";
+import Mission from "./pages/others/Mission";
+import Terms from "./pages/others/Terms";
+import Policy from "./pages/others/Policy";
+import Blogs from "./pages/blogs/Blogs";
+
 
 
 import firebase from './firebase'
@@ -70,16 +75,21 @@ const App = () => {
 }, []);
 
 return (
-  <>
-    <Header />
+  <>   
     <SideDrawer />
     <ToastContainer />
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/mission" component={Mission} />
+      <Route exact path="/terms" component={Terms} />
+      <Route exact path="/privacy" component={Policy} />
+      <Route exact path="/blogs" component={Blogs} />
       <Route exact path="/register/complete" component={RegisterComplete} />
       <Route exact path="/forgot/password" component={ForgotPassword} />
+      
       <UserRoute exact path="/user/history" component={History} />
       <UserRoute exact path="/user/password" component={Password} />
         <UserRoute exact path="/user/wishlist" component={Wishlist} />
@@ -109,6 +119,7 @@ return (
           <AdminRoute exact path="/admin/coupon" component={CreateCouponPage} />
           <UserRoute exact path="/payment" component={Payment} />
     </Switch>
+   
   </>
 );
 };

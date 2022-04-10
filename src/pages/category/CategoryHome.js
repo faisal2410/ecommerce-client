@@ -3,6 +3,7 @@ import { getCategory } from "../../functions/category";
 import { Link } from "react-router-dom";
 import ProductCard from "../../components/cards/ProductCard";
 import CategoryList from "../../components/category/CategoryList";
+import DefaultLayout from "../../components/nav/Header";
 
 const CategoryHome = ({ match }) => {
   const [category, setCategory] = useState({});
@@ -22,6 +23,9 @@ const CategoryHome = ({ match }) => {
   }, []);
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col">
@@ -45,6 +49,7 @@ const CategoryHome = ({ match }) => {
         ))}
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

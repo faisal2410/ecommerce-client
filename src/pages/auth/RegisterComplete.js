@@ -3,6 +3,7 @@ import firebase from "../../firebase";
 import { toast } from "react-toastify";
 import { useDispatch} from "react-redux";
 import { createOrUpdateUser } from "../../functions/auth";
+import DefaultLayout from "../../components/nav/Header";
 
 const RegisterComplete = ({ history }) => {
   const [email, setEmail] = useState("");
@@ -90,6 +91,7 @@ const RegisterComplete = ({ history }) => {
   );
 
   return (
+    <DefaultLayout>
     <div className="container p-5">
       <div className="row">
         <div className="col-md-6 offset-md-3">
@@ -98,6 +100,7 @@ const RegisterComplete = ({ history }) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

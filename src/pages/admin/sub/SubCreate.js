@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 import CategoryForm from "../../../components/forms/CategoryForm";
 import LocalSearch from "../../../components/forms/LocalSearch";
+import DefaultLayout from "../../../components/nav/Header";
 
 const SubCreate = () => {
   const { user } = useSelector((state) => ({ ...state }));
@@ -73,6 +74,9 @@ const SubCreate = () => {
   const searched = (keyword) => (c) => c.name.toLowerCase().includes(keyword);
 
   return (
+    <DefaultLayout>
+
+   
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-2">
@@ -131,6 +135,7 @@ const SubCreate = () => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

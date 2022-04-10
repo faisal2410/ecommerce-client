@@ -4,6 +4,7 @@ import SingleProduct from "../components/cards/SingleProduct";
 import { useSelector } from "react-redux";
 import { getRelated } from "../functions/product";
 import ProductCard from "../components/cards/ProductCard";
+import DefaultLayout from "../components/nav/Header";
 
 const Product = ({ match }) => {
   const [product, setProduct] = useState({});
@@ -45,6 +46,7 @@ const Product = ({ match }) => {
   };
 
   return (
+    <DefaultLayout>
     <div className="container-fluid">
       <div className="row pt-4">
         <SingleProduct
@@ -74,6 +76,7 @@ const Product = ({ match }) => {
         )}
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 

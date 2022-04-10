@@ -6,6 +6,7 @@ import { MailOutlined, GoogleOutlined } from "@ant-design/icons";
 import { useDispatch,useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { createOrUpdateUser } from "../../functions/auth";
+import DefaultLayout from '../../components/nav/Header'
 
 
 
@@ -141,6 +142,7 @@ const Login = ({ history }) => {
   );
 
   return (
+    <DefaultLayout>
     <div className="container p-5">
       <div className="row">
         <div className="col-md-6 offset-md-3">
@@ -168,6 +170,7 @@ const Login = ({ history }) => {
         </div>
       </div>
     </div>
+    </DefaultLayout>
   );
 };
 
