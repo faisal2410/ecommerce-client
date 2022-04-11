@@ -3,49 +3,49 @@ import { Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-<<<<<<< HEAD
-import Login from "./pages/auth/Login";
-import Register from "./pages/auth/Register";
-import Home from "./pages/Home";
-import SideDrawer from "./components/drawer/SideDrawer";
-import RegisterComplete from "./pages/auth/RegisterComplete";
-import ForgotPassword from "./pages/auth/ForgotPassword";
-import History from "./pages/user/History";
-import UserRoute from "./components/routes/UserRoute";
-import AdminRoute from "./components/routes/AdminRoute";
-import Password from "./pages/user/Password";
-import Wishlist from "./pages/user/Wishlist";
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import CategoryCreate from "./pages/admin/category/CategoryCreate";
-import CategoryUpdate from "./pages/admin/category/CategoryUpdate";
-import SubCreate from "./pages/admin/sub/SubCreate";
-import SubUpdate from "./pages/admin/sub/SubUpdate";
-import ProductCreate from "./pages/admin/product/ProductCreate";
-import AllProducts from "./pages/admin/product/AllProducts";
-import ProductUpdate from "./pages/admin/product/ProductUpdate";
-import Product from "./pages/Product";
-import CategoryHome from "./pages/category/CategoryHome";
-import SubHome from "./pages/sub/SubHome";
-import Shop from "./pages/Shop";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
-import CreateCouponPage from "./pages/admin/coupon/CreateCouponPage";
-import Payment from "./pages/Payment";
-
-import About from "./pages/others/About";
-import Mission from "./pages/others/Mission";
-import Terms from "./pages/others/Terms";
-import Policy from "./pages/others/Policy";
-import Blogs from "./pages/blogs/Blogs";
-
-
-
-=======
->>>>>>> b2e49c18dd4d5db286df308c03286b3a77f2c7e0
-import firebase from './firebase'
 import { useDispatch } from "react-redux";
 import { currentUser } from "./functions/auth";
 import { LoadingOutlined } from "@ant-design/icons";
+import firebase from './firebase'
+// const firebase=lazy(() => import("./firebase"));
+
+// import Login from "./pages/auth/Login";
+// import Register from "./pages/auth/Register";
+// import Home from "./pages/Home";
+// import SideDrawer from "./components/drawer/SideDrawer";
+// import RegisterComplete from "./pages/auth/RegisterComplete";
+// import ForgotPassword from "./pages/auth/ForgotPassword";
+// import History from "./pages/user/History";
+// import UserRoute from "./components/routes/UserRoute";
+// import AdminRoute from "./components/routes/AdminRoute";
+// import Password from "./pages/user/Password";
+// import Wishlist from "./pages/user/Wishlist";
+// import AdminDashboard from "./pages/admin/AdminDashboard";
+// import CategoryCreate from "./pages/admin/category/CategoryCreate";
+// import CategoryUpdate from "./pages/admin/category/CategoryUpdate";
+// import SubCreate from "./pages/admin/sub/SubCreate";
+// import SubUpdate from "./pages/admin/sub/SubUpdate";
+// import ProductCreate from "./pages/admin/product/ProductCreate";
+// import AllProducts from "./pages/admin/product/AllProducts";
+// import ProductUpdate from "./pages/admin/product/ProductUpdate";
+// import Product from "./pages/Product";
+// import CategoryHome from "./pages/category/CategoryHome";
+// import SubHome from "./pages/sub/SubHome";
+// import Shop from "./pages/Shop";
+// import Cart from "./pages/Cart";
+// import Checkout from "./pages/Checkout";
+// import CreateCouponPage from "./pages/admin/coupon/CreateCouponPage";
+// import Payment from "./pages/Payment";
+
+// import About from "./pages/others/About";
+// import Mission from "./pages/others/Mission";
+// import Terms from "./pages/others/Terms";
+// import Policy from "./pages/others/Policy";
+// import Blogs from "./pages/blogs/Blogs";
+
+
+// import firebase from './firebase'
+
 
 // import Login from "./pages/auth/Login";
 // import Register from "./pages/auth/Register";
@@ -83,6 +83,12 @@ const Register = lazy(() => import("./pages/auth/Register"));
 const Home = lazy(() => import("./pages/Home"));
 const Header = lazy(() => import("./components/nav/Header"));
 const SideDrawer = lazy(() => import("./components/drawer/SideDrawer"));
+
+const About =lazy(()=>import("./pages/others/About"));
+const Mission =lazy(()=>import("./pages/others/Mission"));
+const Terms =lazy(()=>import("./pages/others/Terms"));
+const Policy =lazy(()=>import("./pages/others/Policy"));
+const Blogs =lazy(()=>import("./pages/blogs/Blogs"));
 
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
@@ -149,20 +155,17 @@ const App = () => {
 }, [dispatch]);
 
 return (
-<<<<<<< HEAD
-  <>   
-=======
+   
   <Suspense
     fallback={
       <div className="col text-center p-5">
-        __ React Redux EC
+        __ LEAD SH
         <LoadingOutlined />
-        MMERCE __
+        P __
       </div>
     }
   >
-    <Header />
->>>>>>> b2e49c18dd4d5db286df308c03286b3a77f2c7e0
+   
     <SideDrawer />
     <ToastContainer />
     <Switch>
@@ -205,12 +208,9 @@ return (
       <AdminRoute exact path="/admin/coupon" component={CreateCouponPage} />
       <UserRoute exact path="/payment" component={Payment} />
     </Switch>
-<<<<<<< HEAD
    
-  </>
-=======
+  
   </Suspense>
->>>>>>> b2e49c18dd4d5db286df308c03286b3a77f2c7e0
 );
 };
 
