@@ -52,4 +52,13 @@ body{
     font-size:32px !important; 
     letter-spacing:2px !important;
   }
- 
+  .cat-btn{
+    background-color: #001529 !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: none;
+    outline: none;
+  }
+  .cat-btn:hover{
+    background-color: #406383 !important;
+  }

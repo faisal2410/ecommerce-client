@@ -18,14 +18,15 @@ const CategoryList = () => {
     categories.map((c) => (
       <div
         key={c._id}
-        className="col btn btn-outlined-primary btn-lg btn-block btn-raised m-3"
+        className="col btn cat-btn m-3"
       >
-        <Link to={`/category/${c.slug}`}>{c.name}</Link>
+        <Link className="text-white" to={`/category/${c.slug}`}>{c.name}</Link>
       </div>
     ));
 
   return (
     <div className="container">
+    <h4 className="text-center">Choose Products by Categories</h4>
       <div className="row">
         {loading ? (
           <h4 className="text-center">Loading...</h4>

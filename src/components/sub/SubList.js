@@ -18,15 +18,16 @@ const SubList = () => {
     subs.map((s) => (
       <div
         key={s._id}
-        className="col btn btn-outlined-primary btn-lg btn-block btn-raised m-3"
+        className="col btn cat-btn m-3"
       >
-        <Link to={`/sub/${s.slug}`}>{s.name}</Link>
+        <Link to={`/sub/${s.slug}`} className="text-white">{s.name}</Link>
       </div>
     ));
 
   return (
     <div className="container">
       <div className="row">
+      <h4 className="text-center">Choose Products by Sub Categories</h4>
         {loading ? <h4 className="text-center">Loading...</h4> : showSubs()}
       </div>
     </div>

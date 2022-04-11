@@ -12,7 +12,11 @@ import {
   ShoppingCartOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  InfoCircleOutlined
+  InfoCircleOutlined,
+  MessageOutlined,
+  UnorderedListOutlined,
+  SubnodeOutlined,
+  QuestionCircleOutlined
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import firebase from "../../firebase";
@@ -87,8 +91,20 @@ const HeaderMain = (props) => {
             </Badge>
           </Link>
         </Item>
+        <Item className="" key="category" icon={<UnorderedListOutlined />}>
+          <Link to="/categorieslist">Categories</Link>
+        </Item>
+        <Item className="" key="category" icon={<SubnodeOutlined />}>
+          <Link to="/subcategorieslist">Sub Categories</Link>
+        </Item>
+        <Item className="" key="faq" icon={<QuestionCircleOutlined />}>
+          <Link to="/faq">FAQ</Link>
+        </Item>
         <Item className="" key="blog" icon={<InfoCircleOutlined />}>
           <Link to="/blogs">LeadBlog</Link>
+        </Item>
+        <Item className="" key="contact" icon={<MessageOutlined />}>
+          <Link to="/contact">Contact Us</Link>
         </Item>
         {/* <Item className=" me-auto col-md-6 p-1">
           <Search />

@@ -60,9 +60,7 @@ const Cart = ({history}) => {
   );
 
   return (
-    <DefaultLayout>
-
-  
+    <DefaultLayout>  
     <div className="container-fluid pt-2">
       <div className="row">
         <div className="col-md-8">
@@ -94,7 +92,7 @@ const Cart = ({history}) => {
             <>
               <button
                 onClick={saveOrderToDb}
-                className="btn btn-sm btn-primary mt-2"
+                className=" mt-2"
                 disabled={!cart.length}
               >
                 Proceed to Checkout
@@ -102,7 +100,7 @@ const Cart = ({history}) => {
               <br />
               <button
                 onClick={saveCashOrderToDb}
-                className="btn btn-sm btn-warning mt-2"
+                className=" mt-2 mb-2"
                 disabled={!cart.length}
               >
                 Pay Cash on Delivery

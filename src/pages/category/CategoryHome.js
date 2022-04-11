@@ -23,9 +23,7 @@ const CategoryHome = ({ match }) => {
   }, []);
 
   return (
-    <DefaultLayout>
-
-   
+    <DefaultLayout>   
     <div className="container-fluid">
       <div className="row">
         <div className="col">

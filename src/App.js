@@ -81,7 +81,6 @@ import firebase from './firebase'
 const Login = lazy(() => import("./pages/auth/Login"));
 const Register = lazy(() => import("./pages/auth/Register"));
 const Home = lazy(() => import("./pages/Home"));
-const Header = lazy(() => import("./components/nav/Header"));
 const SideDrawer = lazy(() => import("./components/drawer/SideDrawer"));
 
 const About =lazy(()=>import("./pages/others/About"));
@@ -89,6 +88,10 @@ const Mission =lazy(()=>import("./pages/others/Mission"));
 const Terms =lazy(()=>import("./pages/others/Terms"));
 const Policy =lazy(()=>import("./pages/others/Policy"));
 const Blogs =lazy(()=>import("./pages/blogs/Blogs"));
+const Contact =lazy(()=>import("./pages/others/Contact.js"));
+const CategoriesList=lazy(()=>import("./pages/category/CategoriesList.js"));
+const SubCategoriesList =lazy(()=>(import("./pages/sub/SubCategoriesList.js")));
+const Faq =lazy(()=>(import("./pages/faq/Faq.js")));
 
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
@@ -177,6 +180,10 @@ return (
       <Route exact path="/terms" component={Terms} />
       <Route exact path="/privacy" component={Policy} />
       <Route exact path="/blogs" component={Blogs} />
+      <Route exact path="/contact" component={Contact} />
+      <Route exact path="/categorieslist" component={CategoriesList} />
+      <Route exact path="/subcategorieslist" component={SubCategoriesList} />
+      <Route exact path="/faq" component={Faq} />
       <Route exact path="/register/complete" component={RegisterComplete} />
       <Route exact path="/forgot/password" component={ForgotPassword} />
       

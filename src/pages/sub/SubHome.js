@@ -22,8 +22,6 @@ const SubHome = ({ match }) => {
 
   return (
     <DefaultLayout>
-
-   
     <div className="container-fluid">
       <div className="row">
         <div className="col">
