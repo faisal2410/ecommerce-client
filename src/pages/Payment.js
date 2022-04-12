@@ -15,9 +15,13 @@ const Payment = () => {
   }, []);
   return (
     <DefaultLayout>
-    <div className="container p-5 text-center">
-      <p>Complete your purchase</p>
-    </div>
+      <div className="container-fluid p-5 text-center">
+        <div className="row">
+          <div className="col-md-12" data-aos="fade-right">
+            <p>Complete your purchase</p>
+          </div>
+        </div>
+      </div>
     </DefaultLayout>
   );
 };

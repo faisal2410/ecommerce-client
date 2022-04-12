@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 body{
   box-sizing: border-box;
   margin:0;
   padding:0;
+  font-family: 'Montserrat', sans-serif!important;
 }
 .slider img {
     height: 450px;
@@ -41,7 +43,7 @@ body{
   .slide{
     z-index: 2!important;
   }
-  .test:hover{
+  .product-card:hover{
     background-color: rgb(216, 220, 231)!important;
     transform: scale(1.05);
     transition:0.3s;
@@ -62,3 +64,15 @@ body{
   .cat-btn:hover{
     background-color: #406383 !important;
   }
+  
+  .section-title{
+    color:#05a5a5;
+  }
+
+  .ant-card-meta-title{
+    color: #05a5a5 !important;
+  }
+  .ant-card-meta-title:hover{
+    color: #001529 !important;
+  }
+ 

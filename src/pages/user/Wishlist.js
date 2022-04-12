@@ -29,7 +29,7 @@ const Wishlist = () => {
     <DefaultLayout>
 
   
-    <div className="container-fluid">
+    <div className="container-fluid" data-aos="fade-right">
       <div className="row">
         <div className="col-md-2">
           <UserNav />

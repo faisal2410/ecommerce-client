@@ -71,18 +71,20 @@ const ProductCard = ({ product }) => {
         }
         actions={[
           <Link to={`/product/${slug}`}>
-            <EyeOutlined className="text-warning" /> <br /> View Product
+            <EyeOutlined className="text-info d-flex justify-content-center align-items-center" /> View Product
           </Link>,
           <Tooltip title={tooltip}>
-            <button onClick={handleAddToCart} disabled={product.quantity < 1} className="btn btn-outlined-primary">
-              <ShoppingCartOutlined className="text-danger" /> <br />
+            <button onClick={handleAddToCart} disabled={product.quantity < 1} className="btn btn-outline-success">
+              <ShoppingCartOutlined className="text-success d-flex justify-content-center align-items-center" /> 
               {product.quantity < 1 ? "Out of stock" : "Add to Cart"}
             </button>
           </Tooltip>,
         ]}
-        className="test"
+       className="product-card "
+       
       >
-        <Meta
+        <Meta  
+            
           title={`${title} - $${price}`}
           description={`${description && description.substring(0, 40)}...`}
         />

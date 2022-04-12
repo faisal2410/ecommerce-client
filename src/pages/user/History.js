@@ -81,10 +81,8 @@ const History = () => {
     ));
 
   return (
-    <DefaultLayout>
-
-   
-    <div className="container-fluid">
+    <DefaultLayout>   
+    <div className="container-fluid" data-aos="fade-right">
       <div className="row">
         <div className="col-md-2">
           <UserNav />

@@ -11,18 +11,18 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="row  ">
-        <div className="col-md-5 about">
+    <div className="footer container-fluid" >
+      <div className="row " >
+        <div className="col-md-5 about" >
           <h4 className="text-center">ABOUT US</h4>
           <p>
             Lead Shop is focused on providing an excellent customer
-            experience,ease-of-purchase, comprehensive customer care and a
+            experience, ease-of-purchase, comprehensive customer care and a
             hassle-free shopping and return experience.
           </p>
         </div>
 
-        <div className="col-md-3  menu">
+        <div className="col-md-3  menu" >
           <h4>QUICK MENU</h4>
           <div>
             <p className="mb-2 ">

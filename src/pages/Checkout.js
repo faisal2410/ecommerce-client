@@ -159,8 +159,8 @@ const Checkout = ({ history }) => {
   return (
     <DefaultLayout>
 
-   
-    <div className="row">
+   <div className="container-fluid" data-aos="fade-right" >
+   <div className="row">
       <div className="col-md-6">
         <h4>Delivery Address</h4>
         <br />
@@ -222,6 +222,8 @@ const Checkout = ({ history }) => {
         </div>
       </div>
     </div>
+   </div>
+   
     </DefaultLayout>
   );
 };

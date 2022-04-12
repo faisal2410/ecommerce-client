@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ProductCardInCheckout from "../components/cards/ProductCardInCheckout";
 import { userCart } from "../functions/user";
-import DefaultLayout from "../components/nav/Header"
+import DefaultLayout from "../components/nav/Header";
+import Glowing from "../components/Glowing/index";
 
-const Cart = ({history}) => {
+const Cart = ({ history }) => {
   const { cart, user } = useSelector((state) => ({ ...state }));
   const dispatch = useDispatch();
 
@@ -60,67 +61,72 @@ const Cart = ({history}) => {
   );
 
   return (
-    <DefaultLayout>  
-    <div className="container-fluid pt-2">
-      <div className="row">
-        <div className="col-md-8">
-          <h4>Cart / {cart.length} Product</h4>
-
-          {!cart.length ? (
-            <p>
-              No products in cart. <Link to="/shop">Continue Shopping.</Link>
-            </p>
-          ) : (
-            showCartItems()
-          )}
+    <DefaultLayout>
+      <div className="container-fluid pt-2">
+        <div className="row">
+          <div className="col-md-12" >
+            <Glowing></Glowing>
+          </div>
         </div>
-        <div className="col-md-4">
-          <h4>Order Summary</h4>
-          <hr />
-          <p>Products</p>
-          {cart.map((c, i) => (
-            <div key={i}>
+        <div className="row">
+          <div className="col-md-8" data-aos="fade-right" >
+            <h4>Cart / {cart.length} Product</h4>
+
+            {!cart.length ? (
               <p>
-                {c.title} x {c.count} = ${c.price * c.count}
+                No products in cart. <Link to="/shop">Continue Shopping.</Link>
               </p>
-            </div>
-          ))}
-          <hr />
-          Total: <b>${getTotal()}</b>
-          <hr />
-          {user ? (
-            <>
-              <button
-                onClick={saveOrderToDb}
-                className=" mt-2"
-                disabled={!cart.length}
-              >
-                Proceed to Checkout
+            ) : (
+              showCartItems()
+            )}
+          </div>
+          <div className="col-md-4" data-aos="fade-right">
+            <h4>Order Summary</h4>
+            <hr />
+            <p>Products</p>
+            {cart.map((c, i) => (
+              <div key={i}>
+                <p>
+                  {c.title} x {c.count} = ${c.price * c.count}
+                </p>
+              </div>
+            ))}
+            <hr />
+            Total: <b>${getTotal()}</b>
+            <hr />
+            {user ? (
+              <>
+                <button
+                  onClick={saveOrderToDb}
+                  className=" mt-2"
+                  disabled={!cart.length}
+                >
+                  Proceed to Checkout
+                </button>
+                <br />
+                <button
+                  onClick={saveCashOrderToDb}
+                  className=" mt-2 mb-2"
+                  disabled={!cart.length}
+                >
+                  Pay Cash on Delivery
+                </button>
+              </>
+            ) : (
+              <button className="btn btn-sm btn-primary mt-2">
+                <Link
+                  to={{
+                    pathname: "/login",
+                    state: { from: "cart" },
+                  }}
+                >
+                  Login to Checkout
+                </Link>
               </button>
-              <br />
-              <button
-                onClick={saveCashOrderToDb}
-                className=" mt-2 mb-2"
-                disabled={!cart.length}
-              >
-                Pay Cash on Delivery
-              </button>
-            </>
-          ) : (
-            <button className="btn btn-sm btn-primary mt-2">
-              <Link
-                to={{
-                  pathname: "/login",
-                  state: { from: "cart" },
-                }}
-              >
-                Login to Checkout
-              </Link>
-            </button>
-          )}
+            )}
+          </div>
         </div>
       </div>
-    </div>
     </DefaultLayout>
   );
 };

@@ -1,0 +1,42 @@
+.glowing-parent {
+  height: 30vh;
+  background-color: black; 
+}
+
+.glowing-text-part {
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  transform: translate(-40%, -10%);
+}
+
+.glowing-text-part h1 {
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  color: #fff !important;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.445);
+  margin-bottom: 2px;
+}
+.glowing-text-part h4 {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  color: #fff !important;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.445);
+}
+
+.glowing-text-part:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.89) !important;
+  text-shadow: 2px 2px 15px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .glowing-text-part h1 {
+    font-size: 60px;
+    text-align: center;
+    width: 100%;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.445);
+  }
+}

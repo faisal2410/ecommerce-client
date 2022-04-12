@@ -1,0 +1,30 @@
+.shop-btn{
+    background-color: transparent!important;
+    border: 2px solid white!important;
+    padding: 5px 15px!important;
+    border-radius: 10px!important;
+    color: white!important;
+    margin-top: 25px!important;
+    margin-bottom: 10px!important;
+    position: absolute!important;
+    bottom: 100px !important;
+    z-index: 100!important;
+  }
+  .slider:hover .shop-btn{
+    background-color: tomato!important;
+    color: white!important;
+   
+  }
+
+  /* .slider img {
+    height: 65px;
+    object-fit: cover;
+} */
+  .carousel-content img {
+    height: 65px;
+    object-fit: cover;
+}
+.carousel .thumbs-wrapper {
+     margin: -5px; 
+    overflow: hidden;
+}

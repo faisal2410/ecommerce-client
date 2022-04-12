@@ -2,6 +2,9 @@ import React, { useEffect, lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
 
 import { useDispatch } from "react-redux";
 import { currentUser } from "./functions/auth";
@@ -124,7 +127,10 @@ const CreateCouponPage = lazy(() =>
 const Payment = lazy(() => import("./pages/Payment"));
 
 
-
+// ..
+AOS.init({
+  duration: 3000,
+});
 
 
 const App = () => {

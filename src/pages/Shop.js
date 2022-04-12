@@ -14,7 +14,8 @@ import {
   StarOutlined,
 } from "@ant-design/icons";
 import Star from "../components/forms/Star";
-import DefaultLayout from "../components/nav/Header"
+import DefaultLayout from "../components/nav/Header";
+import ParallaxCard from "../components/parallaxCard/ParallaxCard";
 
 
 const { SubMenu, ItemGroup } = Menu;
@@ -51,7 +52,7 @@ const Shop = () => {
   let { search } = useSelector((state) => ({ ...state }));
   const { text } = search;
 
-  useEffect(() => {
+  useEffect(() => {   
     loadAllProducts();
      // fetch categories
      getCategories().then((res) => setCategories(res.data));
@@ -313,12 +314,17 @@ const handleShippingchange = (e) => {
 
   return (
     <DefaultLayout>
-
-  
     <div className="container-fluid">
+    <div className="row">
+    <div className="col-md-12" data-aos="fade-right">
+
+    <ParallaxCard></ParallaxCard>
+    </div>
+
+    </div>
       <div className="row">
         <div className="col-md-3 pt-2">
-          <h4>Search/Filter</h4>
+          <h4 className="section-title">Search/Filter</h4>
           <hr />
 
           <Menu defaultOpenKeys={["1", "2","3","4","5","6","7"]} mode="inline">
@@ -326,7 +332,7 @@ const handleShippingchange = (e) => {
             <SubMenu
               key="1"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <DollarOutlined /> Price
                 </span>
               }
@@ -346,7 +352,7 @@ const handleShippingchange = (e) => {
              <SubMenu
               key="2"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <DownSquareOutlined /> Categories
                 </span>
               }
@@ -357,7 +363,7 @@ const handleShippingchange = (e) => {
               <SubMenu
               key="3"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <StarOutlined /> Rating
                 </span>
               }
@@ -369,7 +375,7 @@ const handleShippingchange = (e) => {
               <SubMenu
               key="4"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <DownSquareOutlined /> Sub Categories
                 </span>
               }
@@ -382,7 +388,7 @@ const handleShippingchange = (e) => {
               <SubMenu
               key="5"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <DownSquareOutlined /> Brands
                 </span>
               }
@@ -395,7 +401,7 @@ const handleShippingchange = (e) => {
              <SubMenu
               key="6"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <DownSquareOutlined /> Colors
                 </span>
               }
@@ -409,7 +415,7 @@ const handleShippingchange = (e) => {
             <SubMenu
               key="7"
               title={
-                <span className="h6">
+                <span className="h6 section-title">
                   <DownSquareOutlined /> Shipping
                 </span>
               }
@@ -421,18 +427,18 @@ const handleShippingchange = (e) => {
           </Menu>
         </div>
 
-        <div className="col-md-9 pt-2">
+        <div className="col-md-9 pt-2" data-aos="fade-right">
           {loading ? (
             <h4 className="text-danger">Loading...</h4>
           ) : (
-            <h4 className="text-danger">Products</h4>
+            <h4 className="section-title ">Products</h4>
           )}
 
           {products.length < 1 && <p>No products found</p>}
 
           <div className="row pb-5">
             {products.map((p) => (
-              <div key={p._id} className="col-md-4 mt-3">
+              <div key={p._id} className="col-md-4 mt-3" >
                 <ProductCard product={p} />
               </div>
             ))}

@@ -47,7 +47,7 @@ const Product = ({ match }) => {
 
   return (
     <DefaultLayout>
-    <div className="container-fluid">
+    <div className="container-fluid" data-aos="fade-right">
       <div className="row pt-4">
         <SingleProduct
           product={product}

@@ -143,9 +143,9 @@ const Login = ({ history }) => {
 
   return (
     <DefaultLayout>
-    <div className="container p-5">
+    <div className="container-fluid p-5">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
+        <div className="col-md-6 offset-md-3" data-aos="fade-right">
           {loading ? (
             <h4 className="text-danger">Loading...</h4>
           ) : (

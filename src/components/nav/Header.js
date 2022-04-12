@@ -62,7 +62,7 @@ const HeaderMain = (props) => {
   };
 
   return (
-    <Layout>  
+    <Layout >  
     <Sider trigger={null} collapsible collapsed={collapsed}>
       <div className="logo">
         <h3>{collapsed ? "LS" : "LEAD SHOP"}</h3>
@@ -184,10 +184,11 @@ const HeaderMain = (props) => {
           style={{
             margin: "10px",
             padding: 24,
-            minHeight:'80vh'
+            minHeight:'80vh',         
+
           }}
         >
-        <Hero/>
+        {/* <Hero/> */}
           {props.children}
           <Footer></Footer>
         </Content>
