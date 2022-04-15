@@ -98,27 +98,28 @@ const Cart = ({ history }) => {
               <>
                 <button
                   onClick={saveOrderToDb}
-                  className=" mt-2"
+                  className=" mt-2 reg-btn w-100"
                   disabled={!cart.length}
                 >
-                  Proceed to Checkout
+                   Proceed to Checkout
                 </button>
                 <br />
                 <button
                   onClick={saveCashOrderToDb}
-                  className=" mt-2 mb-2"
+                  className=" mt-2 mb-2 reg-btn w-100"
                   disabled={!cart.length}
                 >
-                  Pay Cash on Delivery
+                 Pay Cash on Delivery
                 </button>
               </>
             ) : (
-              <button className="btn btn-sm btn-primary mt-2">
+              <button className="btn reg-btn w-100 mt-2 mb-2">
                 <Link
                   to={{
                     pathname: "/login",
                     state: { from: "cart" },
                   }}
+                  className="text-white"
                 >
                   Login to Checkout
                 </Link>

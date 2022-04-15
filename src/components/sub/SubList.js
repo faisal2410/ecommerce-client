@@ -27,7 +27,7 @@ const SubList = () => {
   return (
     <div className="container">
       <div className="row">
-      <h4 className="text-center">Choose Products by Sub Categories</h4>
+      {/* <h4 className="text-center login-heading">Products by Sub Categories</h4> */}
         {loading ? <h4 className="text-center">Loading...</h4> : showSubs()}
       </div>
     </div>

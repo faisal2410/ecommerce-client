@@ -34,7 +34,7 @@ const Register = ({history}) => {
     <form onSubmit={handleSubmit}>
       <input
         type="email"
-        className="form-control"
+        className="form-control login-input p-2 w-100"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Your email"
@@ -42,7 +42,7 @@ const Register = ({history}) => {
       />
 
       <br />
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn reg-btn">
         Register
       </button>
     </form>
@@ -51,11 +51,18 @@ const Register = ({history}) => {
   return (
     <DefaultLayout>
 
-    <div className="container-fluid p-5">
+    <div className="container-fluid p-5" data-aos="fade-right">
       <div className="row">
-        <div className="col-md-6 offset-md-3" data-aos="fade-right">
-          <h4>Register</h4>
+        <div className="col-md-6" >
+          <h4 className="login-heading">Register</h4>
           {registerForm()}
+        </div>
+        <div className="col-md-6 d-flex align-items-center justify-content-center">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
+            alt=""
+            className="img-fluid img-thumbnail"
+          />
         </div>
       </div>
     </div>

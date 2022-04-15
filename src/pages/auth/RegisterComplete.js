@@ -73,18 +73,18 @@ const RegisterComplete = ({ history }) => {
 
   const completeRegistrationForm = () => (
     <form onSubmit={handleSubmit}>
-      <input type="email" className="form-control" value={email} disabled />
+      <input type="email" className="form-control login-input" value={email} disabled />
 
       <input
         type="password"
-        className="form-control"
+        className="form-control login-input"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
         autoFocus
       />
       <br />
-      <button type="submit" className="btn btn-raised">
+      <button type="submit" className="btn reg-btn">
         Complete Registration
       </button>
     </form>
@@ -94,9 +94,16 @@ const RegisterComplete = ({ history }) => {
     <DefaultLayout>
     <div className="container-fluid p-5" data-aos="fade-right">
       <div className="row">
-        <div className="col-md-6 offset-md-3">
+        <div className="col-md-6 ">
           <h4>Register Complete</h4>
           {completeRegistrationForm()}
+        </div>
+        <div className="col-md-6 d-flex align-items-center justify-content-center">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
+            alt=""
+            className="img-fluid img-thumbnail"
+          />
         </div>
       </div>
     </div>

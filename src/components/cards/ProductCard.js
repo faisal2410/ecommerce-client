@@ -70,12 +70,12 @@ const ProductCard = ({ product }) => {
           />
         }
         actions={[
-          <Link to={`/product/${slug}`}>
-            <EyeOutlined className="text-info d-flex justify-content-center align-items-center" /> View Product
+          <Link to={`/product/${slug}`} className="text-info reg-btn d-flex justify-content-center view-product-btn align-items-center" >
+            <EyeOutlined /> View Product
           </Link>,
           <Tooltip title={tooltip}>
-            <button onClick={handleAddToCart} disabled={product.quantity < 1} className="btn btn-outline-success">
-              <ShoppingCartOutlined className="text-success d-flex justify-content-center align-items-center" /> 
+            <button onClick={handleAddToCart} disabled={product.quantity < 1} className="btn reg-btn w-100 d-flex justify-content-center align-items-center lead px-2 add-to-cart-btn">
+              <ShoppingCartOutlined className=" d-flex justify-content-center align-items-center pe-1" /> 
               {product.quantity < 1 ? "Out of stock" : "Add to Cart"}
             </button>
           </Tooltip>,

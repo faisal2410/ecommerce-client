@@ -100,8 +100,8 @@ const HeaderMain = (props) => {
         <Item className="" key="faq" icon={<QuestionCircleOutlined />}>
           <Link to="/faq">FAQ</Link>
         </Item>
-        <Item className="" key="blog" icon={<InfoCircleOutlined />}>
-          <Link to="/blogs">LeadBlog</Link>
+        <Item className="" key="leadnews" icon={<InfoCircleOutlined />}>
+          <Link to="/leadnews">LeadNews</Link>
         </Item>
         <Item className="" key="contact" icon={<MessageOutlined />}>
           <Link to="/contact">Contact Us</Link>

@@ -90,11 +90,16 @@ const About =lazy(()=>import("./pages/others/About"));
 const Mission =lazy(()=>import("./pages/others/Mission"));
 const Terms =lazy(()=>import("./pages/others/Terms"));
 const Policy =lazy(()=>import("./pages/others/Policy"));
-const Blogs =lazy(()=>import("./pages/blogs/Blogs"));
 const Contact =lazy(()=>import("./pages/others/Contact.js"));
 const CategoriesList=lazy(()=>import("./pages/category/CategoriesList.js"));
 const SubCategoriesList =lazy(()=>(import("./pages/sub/SubCategoriesList.js")));
 const Faq =lazy(()=>(import("./pages/faq/Faq.js")));
+
+const LeadNews =lazy(()=>import("./pages/LeadNews"));
+const LeadNewsDesc =lazy(()=>import("./pages/LeadNewsDesc"));
+const AddLeadNews =lazy(()=>import("./pages/admin/leadNews/AddLeadNews.js"));
+const PostedNewsItems =lazy(()=>import("./pages/admin/leadNews/PostedNewsItems.js"));
+const EditLeadNews =lazy(()=>import("./pages/admin/leadNews/EditLeadNews"));
 
 const RegisterComplete = lazy(() => import("./pages/auth/RegisterComplete"));
 const ForgotPassword = lazy(() => import("./pages/auth/ForgotPassword"));
@@ -185,7 +190,13 @@ return (
       <Route exact path="/mission" component={Mission} />
       <Route exact path="/terms" component={Terms} />
       <Route exact path="/privacy" component={Policy} />
-      <Route exact path="/blogs" component={Blogs} />
+      <Route exact path="/leadnews" component={LeadNews} />
+      <Route exact path="/newsdesc/:newsid" component={LeadNewsDesc} />
+      <AdminRoute exact path="/admin/leadnews/addleadnews" component={AddLeadNews} />
+      <AdminRoute exact path="/admin/leadnews/postednewsitems" component={PostedNewsItems} />
+      <AdminRoute exact path="/admin/leadnews/editleadnews/:newsid" component={EditLeadNews} />
+
+     
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/categorieslist" component={CategoriesList} />
       <Route exact path="/subcategorieslist" component={SubCategoriesList} />

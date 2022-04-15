@@ -66,13 +66,57 @@ body{
   }
   
   .section-title{
-    color:#05a5a5;
+    color:#001529;
   }
 
   .ant-card-meta-title{
-    color: #05a5a5 !important;
-  }
-  .ant-card-meta-title:hover{
     color: #001529 !important;
   }
+  .ant-card-meta-title:hover{
+    color: #05a5a5 !important;
+  }
+
+  .login-heading{
+    font-size: 50px;
+    color: transparent;
+    /* -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #DA211C; */
+    color: #05a5a5;
+    font-weight: bold;
+    letter-spacing: 6px;
+  }
+  .login-input{
+    margin-top: 15px;
+    height: 50px;
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.500);
+    padding-left: 20px;
+  }
+  .login-input:focus{
+    box-shadow: none;
+    border-color: rgba(0, 0, 0, 0.500);
+    outline: none;
+  }
+.reg-btn{
+  height: 50px;
+  margin-top: 15px;
+  width: 50%;
+  background-color: #001529!important;
+  color: white!important;
+  border: none;
+  font-size:22px;
+  
+}
+.reg-btn:hover{
+  background-color: #05a5a5!important;
+}
+.add-to-cart-btn{
+  font-size:12px;
+}
+.view-product-btn{
+  font-size:12px;
+}
+.news-card{
+  cursor: pointer;
+}
  

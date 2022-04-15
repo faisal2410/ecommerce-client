@@ -91,7 +91,7 @@ const Checkout = ({ history }) => {
   const showAddress = () => (
     <>
       <ReactQuill theme="snow" value={address} onChange={setAddress} />
-      <button className="btn btn-primary mt-2" onClick={saveAddressToDb}>
+      <button className="btn reg-btn mt-2" onClick={saveAddressToDb}>
         Save
       </button>
     </>
@@ -116,9 +116,9 @@ const Checkout = ({ history }) => {
         }}
         value={coupon}
         type="text"
-        className="form-control"
+        className="form-control login-input"
       />
-      <button onClick={applyDiscountCoupon} className="btn btn-primary mt-2">
+      <button onClick={applyDiscountCoupon} className="btn reg-btn  mb-2">
         Apply
       </button>
     </>
@@ -162,13 +162,10 @@ const Checkout = ({ history }) => {
    <div className="container-fluid" data-aos="fade-right" >
    <div className="row">
       <div className="col-md-6">
-        <h4>Delivery Address</h4>
-        <br />
-        <br />
+        <h4>Delivery Address</h4>      
         {showAddress()}
         <hr />
-        <h4>Got Coupon?</h4>
-        <br />
+        <h4>Got Coupon?</h4>      
         {showApplyCoupon()}
         <br />
         {discountError && <p className="bg-danger p-2">{discountError}</p>}
@@ -193,7 +190,7 @@ const Checkout = ({ history }) => {
           <div className="col-md-6">
             {COD ? (
               <button
-                className="btn btn-primary"
+                className="btn reg-btn"
                 disabled={!addressSaved || !products.length}
                 onClick={createCashOrder}
               >
@@ -201,7 +198,7 @@ const Checkout = ({ history }) => {
               </button>
             ) : (
               <button
-                className="btn btn-primary"
+                className="btn reg-btn w-100"
                 disabled={!addressSaved || !products.length}
                 onClick={() => history.push("/payment")}
               >
@@ -214,7 +211,7 @@ const Checkout = ({ history }) => {
             <button
               disabled={!products.length}
               onClick={emptyCart}
-              className="btn btn-primary"
+              className="btn reg-btn w-100"
             >
               Empty Cart
             </button>

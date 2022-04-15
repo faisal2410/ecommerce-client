@@ -26,7 +26,7 @@ const CategoryList = () => {
 
   return (
     <div className="container">
-    <h4 className="text-center">Choose Products by Categories</h4>
+    {/* <h4 className="text-center login-heading">Choose Products by Categories</h4> */}
       <div className="row">
         {loading ? (
           <h4 className="text-center">Loading...</h4>
